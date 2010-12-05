@@ -13,18 +13,22 @@
   		background-color: #ffffff;
 		  font-family: "Helvetica,Arial,FreeSans";
   		color: #000000;
+        //font-size: 13px;
     }
     #container {
       margin: 0 auto;
       width: 700px;
     }
-		h1 { font-size: 3.8em; color: #000000; margin-bottom: 3px; }
+    img {border: none;}
+		h1 { font-size: 24px; color: #2b2b85; }
 		h1 .small { font-size: 0.4em; }
 		h1 a { text-decoration: none }
 		h2 { font-size: 1.5em; color: #000000; }
     h3 { text-align: center; color: #000000; }
     a { color: #000000; }
-    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
+    a { color: #2b2b85; text-decoration: none }
+    a:hover {text-decoration: underline; }
+    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic; color: #2b2b85; float:rigt; }
     .download { float: right; }
 		pre { background: #000; color: #fff; padding: 15px;}
     hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
@@ -34,26 +38,59 @@
 </head>
 
 <body>
-  <a href="http://github.com/janaya/MailmanWebID"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
 
   <div id="container">
 
     <div class="download">
-      <a href="http://github.com/janaya/MailmanWebID/zipball/master">
-        <img border="0" width="90" src="http://github.com/images/modules/download/zip.png"></a>
-      <a href="http://github.com/janaya/MailmanWebID/tarball/master">
-        <img border="0" width="90" src="http://github.com/images/modules/download/tar.png"></a>
     </div>
 
-    <h1><a href="http://github.com/janaya/MailmanWebID">MailmanWebID</a>
-      <span class="small">by <a href="http://github.com/janaya">janaya</a></span></h1>
+    <a href="http://github.com/janaya/MailmanWebID"><img src="img/logo.png"></a>
+    <h1>MailmanWebID</h1>
 
     <div class="description">
       WebID authentication and authorization for Mailman
     </div>
 
+    <p>By adding WebID support to Mailman, this project aims at:
+                (1) providing a simple subscription and authentication
+                mechanism without the need for the user of creating
+                another user/password. 
+                (2) producing  a mechanism to evaluate a set of trust
+                rules that can be used to decide
+                whether an user can join or create a list, for
+                automated moderation, and granular access control to
+                archives and profiles. 
+<h2>Technologies</h2>
+<p><ul>
+    <li><a href="http://WebID.info/">WebID </a>, a decentralized technology that leverages
+                X.509 Certificates and provides and open standard for
+                identity and login.</li>
+    <li><a href="http://wiki.list.org/display/DEV/Mailman+3.0">Mailman 3.x</a>, provides REST interface and general plugins architecture for <a href="http://www.gnu.org/software/mailman/index.html">GNU Mailman</a>.</li>
+    <li><a href="http://wiki.list.org/display/DEV/Web+Interface+Status">django-mailman</a> , a Django
+                webapp that provide a more usable Mailman interface
+                making use of the Mailman REST API. </li>
+    <li><a href="https://github.com/duy/django-foafssl">django-foafssl</a> , a webapp to generate WebId
+                certificates and to provide WebId authentication module
+                for Django. </li>
+</ul>
+</p>
+
+<h2>Install</h2>
+    <h2>Download</h2>
+    <p>
+      You can download this project in either
+      <a href="http://github.com/janaya/MailmanWebID/zipball/master">zip</a> or
+      <a href="http://github.com/janaya/MailmanWebID/tarball/master">tar</a> formats.
+    </p>
+    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
+      by running:
+      <pre>$ git clone git://github.com/janaya/MailmanWebID</pre>
+    </p>
+
+    <h2>Bugs and features</h2>
+    <p>If you wish to signal a bug or report a feature request, please fill-in an issue on the <a href="https://github.com/janaya/MailmanWebID/issues">MailmanWebID issue tracker</a>.</p>
     <h2>License</h2>
-<p>LGPL</p>
+<p><a href="http://www.gnu.org/licenses/lgpl.html">LGPL v3</a></p>
 
 
     <h2>Download</h2>
